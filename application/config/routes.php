@@ -61,6 +61,9 @@ $route['buku_create'] = 'bukuController/store';
 $route['buku_ubah'] = 'bukuController/edit';
 $route['buku_save'] = 'bukuController/save';
 
+$route['sirkulasi'] = 'sirkulasiController';
+$route['pinjam'] = 'sirkulasiController/pinjam';
+$route['hapus'] = 'sirkulasiController/hapus';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

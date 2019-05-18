@@ -12,11 +12,17 @@
 						'password' => $row->password
 					);
 					$this->session->set_userdata($sess);
-					redirect('anggota');
+					echo "<script type='text/javascript'>
+					window.alert('Login Sukses');
+					window.location.href='anggota';
+					</script>";
 				}
 			}
 			else{
-				redirect('login');
+				echo "<script type='text/javascript'>
+				window.alert('Pasword atau Username Salah');
+				window.location.href='login';
+				</script>";
 			}
 		}
 

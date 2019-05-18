@@ -11,7 +11,7 @@
 						'username' => $row->username,
 						'password' => $row->password
 					);
-					$this->session->get_userdata($sess);
+					$this->session->set_userdata($sess);
 					redirect('anggota');
 				}
 			}
@@ -21,9 +21,8 @@
 		}
 
 		public function keamanan(){
-			$username = $this->session->sess_destroy('username');
-			if(!empty($username)){
-				$this->session->sess_destroy();
+			$username = $this->session->userdata('username');
+			if($username==""){
 				redirect('login');
 			}
 		}
